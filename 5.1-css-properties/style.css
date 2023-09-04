@@ -1,0 +1,27 @@
+#div1 {
+  border-style: solid;
+  border-radius: 0.5rem;
+  border-color: red;
+  border-width: 0.1rem;
+
+  font-size: 150%;
+}
+
+#div2 {
+  font-weight: bold;
+  font-style: italic;
+}
+
+#div3 {
+  background-color: black;
+  color: white;
+
+  text-shadow: 1;
+  text-shadow: 0.1rem 0.1rem 0.1rem grey;
+}
+
+/* i added this part so the <p> block element stops streatching the borders of the div
+(this removes the space between them) */
+p {
+  margin: 0%;
+}
