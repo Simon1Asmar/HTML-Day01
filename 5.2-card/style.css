@@ -1,0 +1,28 @@
+.card {
+background-color:beige;
+
+height: 400px;
+width: 350px;
+
+/* box-shadow: x-offset y-offset blur radius color */
+box-shadow: 0px 0px 50px black;
+
+}
+
+.card img{
+  width: 100%;
+}
+
+.card h3{
+  margin: 0%;
+}
+
+.card h4{
+  margin: 0%;
+  font-weight:normal;
+}
+
+section.card nav a{
+  font-size: 0.8em;
+  color: goldenrod;
+}
