@@ -1,0 +1,31 @@
+body {
+  background-color: rgb(132, 200, 255);
+  color: #212121;
+  font-family: 'Roboto', sans-serif;
+}
+
+#description strong {
+  color: darkred;
+}
+
+.card {
+  border-width: 10px;
+  border-radius: 12px;
+  border-style: solid;
+  margin: 0 auto;
+  text-align: center;
+
+  width: fit-content;
+  /* padding: 1em; */
+  padding-right: 1em;
+  padding-left: 1em;
+
+  box-shadow: 0px 0px 50px black;
+}
+
+
+.card ul{
+  /* list-style: none; */
+  display: inline-block;
+  text-align: left;
+}
