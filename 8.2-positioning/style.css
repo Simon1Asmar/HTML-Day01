@@ -1,0 +1,23 @@
+.outer{
+  background: darkcyan;
+  width: 100px;
+  height: 100px;
+
+  margin: 50px;
+
+  position: relative;
+}
+
+.inner{
+  background:lightgreen;
+  width: 50px;
+  height: 50px;
+
+  position: relative;
+  
+  top: 10px;
+}
+
+body{
+  font-size: 22px;
+}
