@@ -1,0 +1,20 @@
+.outer{
+  background: darkcyan;
+  width: 100px;
+  height: 100px;
+
+  margin: 50px;
+
+  position: relative;
+}
+
+.inner{
+  background:lightgreen;
+  width: 50px;
+  height: 50px;
+
+  /* in-order to position an inner element somewhere inside its outer element.. the outer element's position must be set to relative and the inner one must be set to absolute that way it can be positioned relative to it's parent */
+  position: absolute;
+  
+  top: 10px;
+}
