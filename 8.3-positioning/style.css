@@ -1,0 +1,47 @@
+#div1{
+  background: white;
+  border: 2px black solid;
+
+  width: 300px;
+  height: 200px;
+
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}
+
+#div2{
+  background: white;
+  border: 2px black solid;
+
+  width: 200px;
+  height: 200px;
+
+  position: absolute;
+  top: 175px;
+  left: 250px;
+}
+
+#div3{
+  background: white;
+  border: 2px black solid;
+
+  width: 650px;
+  height: 200px;
+
+  position: absolute;
+  top: 350px;
+  left: 50px;
+}
+
+#div4{
+  background: white;
+  border: 2px black solid;
+
+  width: 125px;
+  height: 600px;
+
+  position: absolute;
+  top: 50px;
+  left: 550px;
+}
