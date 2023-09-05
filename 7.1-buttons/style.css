@@ -1,0 +1,130 @@
+body {
+  background: #333;
+  font-family:'Roboto', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+h2 {
+  color: white;
+}
+
+main {
+  margin: 0px auto;
+}
+
+section {
+  width: 80%;
+  margin: 0px auto;
+
+  text-align: center;
+}
+
+section button{
+  font-size: 22px;
+  margin-right: 10%;
+
+  color: white;
+}
+
+section input[type="submit"]{
+  color: white;
+}
+
+.flat{
+  border-radius: 0px;
+  border-style: solid;
+
+  padding: 10px;
+}
+
+.round{
+  border-radius: 25px;
+  border-style: solid;
+
+  padding: 10px;
+}
+
+/* FLAT */
+#flat-button {
+  background: deepskyblue;
+  border-width: 0px;
+}
+
+#flat-button:hover {
+  background: rgb(0, 136, 181);
+  color: #DDD;
+  border-width: 0px;
+}
+
+#flat-submit {
+  background: coral;
+  border-width: 0px;
+}
+
+#flat-submit:hover {
+  background: rgb(199, 96, 58);
+  color: #DDD;
+  border-width: 0px;
+}
+
+/* ROUND */
+#round-button {
+  background: green;
+  border-width: 0px;
+}
+
+#round-button:hover {
+  background: rgb(0, 92, 0);
+  color: #DDD;
+  border-width: 0px;
+}
+
+#round-submit {
+  background: deeppink;
+  border-width: 0px;
+}
+
+#round-submit:hover {
+  background: rgb(194, 17, 111);
+  color: #DDD;
+  border-width: 0px;
+}
+
+/* FLAT GHOST */
+#flat-ghost-button {
+  background: none;
+  border: 2px solid brown;
+}
+
+#flat-ghost-button:hover {
+  background: brown;
+}
+
+#flat-ghost-submit {
+  background: none;
+  border: 2px solid plum;
+}
+
+#flat-ghost-submit:hover {
+  background: plum;
+}
+
+/* ROUND GHOST */
+#round-ghost-button {
+  background: none;
+  border: 2px solid goldenrod;
+}
+
+#round-ghost-button:hover {
+  background: goldenrod;
+}
+
+#round-ghost-submit {
+  background: none;
+  border: 2px solid burlywood;
+}
+
+#round-ghost-submit:hover {
+  background: burlywood;
+}
+

@@ -1,0 +1,36 @@
+a {
+  color: #333;
+
+  /* we used this line to remove the underlining of the link */
+  text-decoration: none;
+}
+
+a:hover{
+  color: coral;
+  /* font-size: 40px; */
+  text-decoration: underline;
+}
+
+/* adds effect to link's the used visited */
+/* a:visited{
+  color: green;
+} */
+
+a:active{
+  color: red;
+}
+
+.btn{
+  background: purple;
+  font-size: 20px;
+  color: aliceblue;
+  padding: 10px 20px;
+  border-radius: 10px;
+
+  cursor: pointer;
+}
+
+.btn:hover{
+  background: white;
+  color: #770879;
+}
