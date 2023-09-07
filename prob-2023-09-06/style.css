@@ -1,0 +1,12 @@
+section{
+  background-color:blue;
+  width: 100%;
+  height: 200px;
+}
+
+/* CSS RESET */
+html, body{
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
