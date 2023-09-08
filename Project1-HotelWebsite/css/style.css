@@ -190,9 +190,6 @@ p {
 }
 
 /* About Info */
-#about-info {
-  /* overflow: auto; */
-}
 
 #about-info .info-right{
   float: right;
@@ -213,22 +210,10 @@ p {
   min-height: 100%;
 }
 
-/* Footer */
-#main-footer{
-  width: 100%;
-  /* height: 50px; */
-  background-color: #444;
-  color: #fff;
-  /* overflow: auto; */
-  text-align: center;
-  padding: 20px;
-}
-
 /* Testimonials */
 #testimonials {
-  height: 600px;
   background: url(./../img/test-bg.jpg) no-repeat center center/cover;  
-  padding-top: 100px;
+  padding-top: 50px;
 }
 
 #testimonials h2 {
@@ -242,8 +227,6 @@ p {
   margin-bottom: 40px;
   border-radius: 25px;
   opacity: 0.9;
-
-  overflow: auto;
 }
 
 #testimonials .testimonial img {
@@ -251,4 +234,16 @@ p {
   float: left;
   margin-right: 20px;
   border-radius: 50%;
+}
+
+
+/* Footer */
+#main-footer{
+  width: 100%;
+  /* height: 50px; */
+  background-color: #444;
+  color: #fff;
+  /* overflow: auto; */
+  text-align: center;
+  padding: 20px;
 }
