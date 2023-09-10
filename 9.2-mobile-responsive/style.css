@@ -5,21 +5,20 @@
 }
 
 .box{
-  width: 300px;
+  width: 24%;
   padding: 10px;
   color: white;
   background-color: #333;
-  margin: 15px;
-}
+  margin: 0.5%;
 
-#flexbox1 {
-  display: flex;
-  flex-direction: row;
+  float: left;
 }
 
 /* Mobile */
 @media (max-width: 500px){
-  #flexbox1{
-    flex-direction: column;
+  .box {
+    float: none;
+    width: auto;
+    margin: 1%;
   }
 }
