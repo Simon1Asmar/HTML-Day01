@@ -75,3 +75,12 @@ section.container {
 .clr {
   clear: both;
 }
+
+@media (max-width: 700px) {
+  aside{
+    display: none;
+  }
+  main{
+    width: 100%;
+  }
+}
