@@ -1,0 +1,24 @@
+
+/* Direct Child */
+section > p {
+  background-color: thistle;
+}
+
+/* Directly After */
+section + p {
+  background-color: #333;
+  color: white;
+}
+
+/* By Attribute */
+a[target] {
+  background: red;
+  color: white;
+}
+
+/* Specific Attribute Value */
+input[type="text"],
+input[type="email"] {
+  width: 100%;
+  margin: 5px;
+}
