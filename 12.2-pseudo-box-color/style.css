@@ -1,0 +1,17 @@
+#box{
+  width: 20rem;
+  height: 20rem;
+  background-color: #333;
+  position: relative;
+}
+
+#box::after{
+  content: "";
+  display: inline-block;
+  width: 50%;
+  height: 100%;
+  background-color: coral;
+
+  position: absolute;
+  right: 0;
+}
