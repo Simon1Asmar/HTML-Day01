@@ -1,0 +1,192 @@
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  /* background: green; */
+}
+
+.box {
+  position: relative;
+  border: solid black 2px;
+  display: inline-block;
+  height: 50px;
+  width: 100px;
+  overflow: hidden;
+
+  display: flex;
+  margin: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+#box1::before {
+  content: "Cool!";
+  width: 100%;
+  height: 100%;
+  background-color: red;
+  transform: translate(0px, -50px);
+  transition: transform 0.35s linear;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#box1:hover::before {
+  transform: translate(0px, 0px);
+}
+
+#box1::after{
+  content: "TranslateY";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#box2::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  /* display: block; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: blue;
+  transform: translate(-100px, 0px);
+  transition: transform 0.35s linear;
+}
+
+#box2:hover::before {
+  transform: translate(0px, 0px);
+}
+
+#box2::after{
+  content: "TranslateX";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  /* z-index: -1; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#box3::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  /* display: block; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: yellow;
+  transform: rotate(90deg) translate(75px, 75px);
+  transition: transform 0.35s ease-in-out;
+}
+
+#box3:hover::before {
+  transform: translate(0px, 0px) rotate(0deg);
+}
+
+#box3::after{
+  content: "Rotate";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#box4::before {
+  content: "scale";
+  color: white;
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  /* display: block; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: bold;
+  text-align: center;
+
+  opacity: 0;
+  scale: 5;
+  /* transition: opacity 0.5s ease-in-out;
+  transition: scale 0.5s ease-in-out; */
+  transition: all 0.5s ease-in-out;
+}
+
+#box4:hover::before {
+  opacity: 1;
+  scale: 1;
+}
+
+#box4::after{
+  content: "Scale";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#box5{
+  /* overflow: visible; */
+  transition: all 0.1s ease-in-out;
+}
+
+#box5::after{
+  content: "Skew";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+#box5::before{
+  content: "";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: deeppink;
+
+  /* transform: rotateY(500deg) skew(-15deg); */
+  transform: rotate(360deg) skew(15deg);
+  scale: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+#box5:hover::before{
+  transform: rotateY(0deg)skew(0deg);
+  overflow: hidden;
+  scale: 1;
+}
+
+#box5:hover{
+  transform: skew(-25deg);
+}
