@@ -1,0 +1,39 @@
+.container {
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "content content sidebar"
+    "box1 box2 box3"
+    "footer footer footer";
+
+    gap: 1rem;
+}
+
+.header{
+  grid-area: header;
+  text-align: center;
+}
+
+.content{
+  grid-area: content;
+}
+
+.sidebar{
+  grid-area: sidebar;
+}
+
+.footer{
+  grid-area: footer;
+  text-align: center;
+}
+
+.header, 
+.content, 
+.sidebar,
+.box1,
+.box2,
+.box3,
+.footer{
+  border: 2px solid black;
+  padding: 0.5rem;
+}
