@@ -1,0 +1,36 @@
+.grid{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.item{
+  padding: 3rem;
+  border-radius: 25px;
+}
+
+.item:nth-child(1){
+  background-color: red;
+  grid-column: 1 / span 2;
+}
+
+.item:nth-child(2){
+  background-color: dodgerblue;
+  grid-column: 3 / span 2;
+
+}
+
+.item:nth-child(3){
+  background-color: green;
+}
+
+.item:nth-child(4){
+  background-color:darkviolet;
+  grid-column: 2 / span 3;
+}
+
+.item:nth-child(5){
+  background-color: yellow;
+  grid-column: 1 / span 4;
+}
+
