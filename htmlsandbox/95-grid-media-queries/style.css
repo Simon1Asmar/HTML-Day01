@@ -1,0 +1,19 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: 1rem;
+}
+
+/* Tablet */
+@media(max-width: 760px){
+  .grid{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media(max-width: 500px){
+  .grid{
+    grid-template-columns: 1fr;
+  }
+}
