@@ -1,0 +1,196 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #111;
+
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+#spinner1{
+  width: 50px;
+  height: 50px;
+  border: 4px #aaa solid;
+  border-top: orange 4px solid;
+  border-radius: 50px;
+
+  animation: spin 1s infinite linear;
+}
+#spinner2{
+  width: 50px;
+  height: 50px;
+  border: 4px transparent solid;
+  border-left: 0px;
+  border-top: orange 4px solid;
+  border-radius: 50px;
+
+  animation: spin 1s infinite linear;
+}
+
+@keyframes spin{
+  0% {
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+#dotSet1{
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
+#dotSet2{
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
+.dot{
+  background-color: #aaa;
+  height: 10px;
+  width: 10px;
+  border-radius: 50px;
+}
+
+#dotSet1 #dot1
+{
+  animation: set1dot1 1s infinite linear;
+}
+
+@keyframes set1dot1 {
+  0% {
+    background-color: #aaa;
+  }
+  25% {
+    background-color: orange;
+  }
+  50%{
+    background-color: #aaa;
+  }
+  100%{
+    background-color: #aaa;
+  }
+}
+
+#dotSet1 #dot2
+{
+  animation: set1dot2 1s infinite linear;
+}
+
+@keyframes set1dot2 {
+  0% {
+    background-color: #aaa;
+  }
+  25% {
+    background-color: #aaa;
+  }
+  50%{
+    background-color: orange;
+  }
+  100%{
+    background-color: #aaa;
+  }
+}
+
+#dotSet1 #dot3
+{
+  animation: set1dot3 1s infinite linear;
+}
+
+@keyframes set1dot3 {
+  0% {
+    background-color: #aaa;
+  }
+  40%{
+    background-color: #aaa;
+  }
+  80%{
+    background-color: orange;
+  }
+  100%{
+    background-color: #aaa;
+  }
+}
+
+
+
+#dotSet2 #dot1
+{
+  background-color: orange;
+  animation: set2dot1 2s infinite linear;
+}
+
+@keyframes set2dot1 {
+  0% {
+    transform: scale(0);
+  }
+  30% {
+    transform: scale(1);
+  }
+  60%{
+    transform: scale(0);
+  }
+  100%{
+    transform: scale(0);
+  }
+}
+
+#dotSet2 #dot2
+{
+  background-color: orange;
+  animation: set2dot2 2s infinite linear;
+}
+
+@keyframes set2dot2 {
+  0% {
+    transform: scale(0);
+  }
+  30% {
+    transform: scale(0);
+  }
+  60%{
+    transform: scale(1);
+  }
+  90%{
+    transform: scale(0);
+  }
+  100%{
+    transform: scale(0);
+  }
+}
+
+#dotSet2 #dot3
+{
+  background-color: orange;
+  animation: set2dot3 2s infinite linear;
+}
+
+@keyframes set2dot3 {
+  0% {
+    transform: scale(0);
+  }
+  30% {
+    transform: scale(0);
+  }
+  60%{
+    transform: scale(0);
+  }
+  90%{
+    transform: scale(1);
+  }
+  100%{
+    transform: scale(0);
+  }
+}
+
