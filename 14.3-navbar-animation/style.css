@@ -11,7 +11,6 @@ body {
 #navbar ul {
   display: flex;
   list-style: none;
-  background-color: coral;
   align-items: center;
   justify-content: center;
 
@@ -19,7 +18,6 @@ body {
 }
 
 #navbar ul li a {
-  background-color: aqua;
   padding: 5px 10px;
   margin: 5px;
   text-decoration: none;
@@ -32,19 +30,31 @@ body {
   content: "";
   display: block;
   height: 100%;
-  width: 100%;
+  width: 0%;
   position: absolute;
   top: 0;
   left: 0;
   border-top: 2px black solid;
+  transition: all 1s ease-in-out;
+
 }
+#navbar ul li a:hover::after{
+  width: 100%;
+}
+
 #navbar ul li a::before{
   content: "";
   display: block;
   height: 100%;
-  width: 100%;
+  width: 0%;
   position: absolute;
-  /* bottom: 0; */
-  /* left: 0; */
-  border-top: 2px black solid;
+  top: 0;
+  right: 0;
+  border-bottom: 2px black solid;
+  transition: all 1s ease-in-out;
+
 }
+#navbar ul li a:hover::before{
+  width: 100%;
+}
+
