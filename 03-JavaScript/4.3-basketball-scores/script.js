@@ -51,7 +51,7 @@ if (maryAvg > winnerAvg) {
   winnerName += " and Mary's Team";
 }
 
-// if its a draw it prin't the draw message, if there's one winner it prints that message
+// if its a draw it print the draw message, if there's one winner it prints that message
 if (isDraw) {
   console.log(`Draw between ${winnerName}, Avg: ${winnerAvg}`);
 } else {

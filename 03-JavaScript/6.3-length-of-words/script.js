@@ -15,8 +15,9 @@ console.log("Without using a loop (manually)", numOfChars);
 arrayOfCharNums(favoriteTvShows);
 
 function arrayOfCharNums(array){
-  const output = []
-  for(let i=0; i<array.length; i++){
+  const output = [];
+
+  for(let i=0; i<array.length; i++){ 
     output.push(array[i].length);
   }
 
