@@ -15,11 +15,11 @@ people.unshift("Matt"); //adds to the front of the array
 console.log('unshift("Matt")', people);
 
 // 4. Write the command to add your name to the end of the array.
-people.push("Simon"); //
+people.push("Simon");
 console.log('push("Simon")', people);
 
 // 5. Write the command to make a copy of the array using a slice. The copy should NOT include "Mary" or "Matt".
-let peopleCopy = people.slice(2);
+const peopleCopy = people.slice(2);
 console.log("copy slice", peopleCopy);
 
 // 6. Write the command that gives the indexOf where "Mary" is located.
