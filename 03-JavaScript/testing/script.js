@@ -1,7 +1,16 @@
-let max = 3;
-let min = 1;
+function printString(){
+  console.log("hello")
+};
 
-for (let i = 0; i < 20; i++) {
-  console.log(Math.round(Math.random() * (max - min) + min));
+function add(n1, n2){
+  console.log(n1+n2);
+};
+
+add(12, 60);
+
+function add2(n1, n2){
+  return n1 + n2;
 }
 
+let newNum = add2(12, 3);
+console.log(newNum)
