@@ -3,7 +3,6 @@ function getCurrentDate(){
   const arrayOfDays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "September"];
 
   const date = new Date();
-  // console.log(date)
 
   return `Today is ${arrayOfDays[date.getDay()]} the ${date.getDate()} of ${arrayOfMonths[date.getMonth()]} ${date.getFullYear()}`;
 }
