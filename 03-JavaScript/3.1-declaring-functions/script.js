@@ -29,7 +29,7 @@ function add(a, b = 5) {
 }
 */
 
-const welcome = () => "Welcome to Appleseeds Bootcamp!";
+const welcome = () => { return "Welcome to Appleseeds Bootcamp!"};
 console.log(welcome());
 
 const myNumber1 = (a) => Math.pow(a, 2);
