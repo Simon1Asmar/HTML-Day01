@@ -1,25 +1,19 @@
-function printString(){
-  console.log("hello")
-};
+const listOfNeighbours = [
+  ["Canada", "Mexico"], //0
+  ["Spain"], //1
+  ["Norway", "Sweden", "Russia"], //2
+  ];
 
-function add(n1, n2){
-  // console.log(n1+n2);
-  const result = n1+n2;
-};
+  console.log(listOfNeighbours.length)
 
-add(12, 60);
+  for(let i = 0; i<listOfNeighbours.length;i++){ //i=0
+    // console.log(`i=${i}: listOfNeighbours[${i}]=`+listOfNeighbours[i])  //listOfNeighbours[0] ---- ["canada", "Mexico"]
 
-function add2(n1, n2){
-  const result = n1+n2;
-  return result;
-}
+    //listOfNeighbours[0].length == 2
+    // console.log(listOfNeighbours[i].length)
+    innerArray = listOfNeighbours[i]
+    for(let j=0; j<innerArray.length; j++){
+      console.log(innerArray[j])
+    }
 
-// let newNum = add2(12, 3);
-// console.log(newNum)
-
-const firstNum = add2(4, 9);
-const secondNum = add2(8,8);
-
-console.log(`${firstNum} and ${secondNum}`);
-
-// console.log(Date.prototype.getDate())
+  }
