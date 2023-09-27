@@ -19,7 +19,7 @@ const library = [
 const readableBooks =  library.filter( b => {
   if(b.readingStatus===true){
     console.log(`\"${b.title}\" by ${b.author}, readable status: ${b.readingStatus}`)
-    return b.title;
+    return true;
   }
 })
 
