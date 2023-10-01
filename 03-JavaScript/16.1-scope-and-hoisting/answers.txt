@@ -1,0 +1,122 @@
+Without running the code below, explain in your own words what the result of each block of code will be and why. If there are any faulty outputs, please write on how we can fix them.
+
+---------------------------
+
+Block 1
+function funcA() {
+  console.log(a);
+  console.log(foo());
+  var a = 1;
+  function foo() {
+    return 2;
+  }
+}
+funcA();
+
+first it would log a = undefined: because it's a variable so it's hoisted but the value still wouldnt be defined. if it was below then it would log the value which is 1.
+
+then it owuld log foo() which returns 2 (it will log 2). this happens because functions are hoisted so you can invoke them on any line (doesnt have to be a line below)
+
+checked: correct
+
+---------------------------
+
+Block 2
+
+var fullName = 'John Doe';
+var obj = {
+  fullName: 'Colin Ihrig',
+  prop: {
+    fullName: 'Aurelio De Rosa',
+    getFullName: function () {
+      return this.fullName;
+    }
+  }
+};
+
+console.log(obj.prop.getFullName());
+var test = obj.prop.getFullName;
+console.log(test());
+
+My thoughts:-
+I think they would both log 'Aurelio De Rosa' because when it goes back out of it's scope the closest place it finds fullName is where its value is 'Aurelio De Rosa'
+
+Checked: incorrect
+first line console.log(obj.prop.getFullName()); prints 'Aurelio De Rosa'
+
+but when we do var test = obj.prop.getFullName; then console.log(test()); it prints 'Colin Ihrig'
+turns out when we inoke it using test() it's being invoked as a standalone function so the (this) makes it go up to the global scope (window) so it's like calling window.fullname
+
+---------------------------
+
+Block 3
+function funcB() {
+  let a = b = 0;
+  a++;
+  return a;
+}
+funcB();
+console.log(typeof a);
+console.log(typeof b);
+
+My thoughts:-
+i believe it will give an error for both because both are defined only inside the function. 
+
+checked: wrong
+typeof a returns undefined
+typeof b returns number
+the reason for that is because b doesnt have any keyword behind it.
+when a varible is declared without any keyword that is called in implicit global. so it becomes a global variable.
+
+
+---------------------------
+
+function funcC() {
+  console.log("1");
+}
+funcC();
+function funcC() {
+  console.log("2");
+}
+funcC();
+
+My prediction:-
+i believe it will both times log("2") because it would see the last declaration of the function.
+
+checked: correct
+
+---------------------------
+
+function funcD1() {
+  d = 1;
+}
+funcD1();
+console.log(d);
+function funcD2() {
+  var e = 1;
+}
+funcD2();
+console.log(e);
+
+my prediction:-
+i believe console.log(d); would print 1 because it's a global variable but it would give an error for console.log(e) because e is not a global variable, eventhough it's hoisted (its hoisted inside the function) (lexical scope) 
+
+checked: correct
+
+---------------------------
+
+function funcE() {
+  console.log("Value of f in local scope: ", f);
+}
+console.log("Value of f in global scope: ", f);
+var f = 1;
+funcE();
+
+my prediction:
+i believe first time it will print "Value of f in global scope: undefined"
+but the next time it would print "Value of f in global scope: 1" because the function is called after the variable is declared and given a value
+
+
+checked: correct
+
+---------------------------
