@@ -33,18 +33,17 @@ initial-scale=1.0" />
   //Select all inputs and iterate over them with the forEach method and print each one to the console. Using both querySelectorAll and getElementsByTagName.
   
   //using getElementsByTagName
-  const allInputs1 = document.getElementsByTagName("input");
-  for (const input of allInputs1) {
-    console.log(`Using getElementsByTagName("input"):`, input);
-  }
-
+  //i had to convert it to an array because the forEach method is not defined for an HTMLCollection object
+  const allInputs1 = [...document.getElementsByTagName("input")]; 
+  allInputs1.forEach(inputElement => {
+    console.log(`Using getElementsByTagName("input"):`, inputElement);
+  })
 
   //using querySelectorAll
   const allInputs2 = document.querySelectorAll("input");
-  for (const input of allInputs2) {
-    console.log(`Using querySelectorAll("input"):`, input);
-  }
-
+  allInputs2.forEach(inputElement => {
+    console.log(`Using querySelectorAll("input"):`, inputElement);
+  });
   
 </script>
 
