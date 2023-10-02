@@ -28,7 +28,7 @@ users.forEach((userObj) => {
   li.innerText = `${userObj.firstName}  ${userObj.lastName}`;
 
   // Create a custom data attribute called “data-id” and attach the id value to each li.
-  li.setAttribute("data-attribute", Math.floor(Math.random() * 100000));
+  li.setAttribute("data-id", Math.floor(Math.random() * 100000));
 
   // append li to ol
   ol.appendChild(li);
