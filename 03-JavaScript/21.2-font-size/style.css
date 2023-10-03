@@ -1,0 +1,23 @@
+body{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+p{
+  display: inline;
+}
+
+button {
+  width: 2rem;
+  height: 2rem;
+}
