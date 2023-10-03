@@ -1,0 +1,27 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #444;
+}
+
+img{
+  height: 300px;
+  object-fit: cover;
+}
+
+img:hover {
+  cursor: pointer;
+}
+
+body.lightsOn{
+  background-color: rgb(255, 255, 82);
+}
