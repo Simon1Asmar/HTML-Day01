@@ -1,10 +1,12 @@
 const btn = document.querySelector("button");
 const ageInputField = document.querySelector("input");
 const h1 = document.querySelector("h1");
+h1.classList.add("collapsed");
 
 btn.addEventListener("click", ()=>{
   let age = parseInt(ageInputField.value);
-  h1.style.visibility = "visible";
+
+  h1.classList.remove("collapsed");
 
   if(isNaN(age)){
     h1.innerText = "Please enter a valid age"
