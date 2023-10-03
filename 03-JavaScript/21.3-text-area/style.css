@@ -1,0 +1,42 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+textarea {
+  border: #555 2px solid;
+  border-radius: 5px;
+}
+
+.redBorder{
+  border-color: red;
+}
+
+.greenBorder{
+  border-color: green;
+}
+
+#error-message {
+  font-size: 0.8rem;
+  color: red;
+  text-align: right;
+  font-weight: bold;
+}
+
+.collapsed {
+  visibility: collapse;
+}
