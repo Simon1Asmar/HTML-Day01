@@ -1,0 +1,84 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #222;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 0px 15px;
+}
+
+nav p{
+  color: coral;
+  /* font-weight: bold; */
+  font-size: 2rem;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+nav p:hover{
+  cursor:default;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+
+  list-style: none;
+  
+  height: 3rem;
+}
+
+nav ul li a{
+  color: coral;
+  font-weight: 600;
+  
+  text-decoration: none;
+
+  text-align: center;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+nav ul li a:hover{
+  background-color: rgb(250, 204, 188);
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  gap: 10px;
+
+  color: coral;
+}
+
+main input{
+  width: 300px;
+  min-height: 40px;
+  font-size: 30px;
+  background-color: coral;
+  color: #333;
+  border: 5px solid #333;
+  border-radius: 25px;
+  padding: 5px;
+
+  text-align: center;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+main input:focus {
+  outline: none;
+}
