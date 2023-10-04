@@ -29,6 +29,8 @@ form.addEventListener("submit", (e) => {
   ) {
     changeSec.classList.remove("collapsed");
     formSec.classList.add("collapsed");
+  } else {
+    form.reset();
   }
 });
 
