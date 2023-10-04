@@ -7,8 +7,8 @@ const playAgainForm = document.querySelector("form");
 startNewGame();
 
 function keyUpListener({ key }){
-  //if key === "d" : Move player one , if key === "ArrowRight" move player 2
-  if (key === "d") {
+  //checks if d or D to avoid issues if capslock is on
+  if (key === "d" || key === "D") {
     // move player 1
     moveRight(player1Race);
   } else if (key === "ArrowRight") {
