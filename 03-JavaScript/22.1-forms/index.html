@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>22.1 Forms</title>
+  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section id="form-section">
+    <form action="">
+      <label>
+        Name
+        <input type="text" id="name" name="name">
+      </label>
+      <label>
+        Age
+        <input type="number" id="age" name="age">
+      </label>
+      <label>
+        Email
+        <input type="email" name="email" id="email">
+      </label>
+      <button type="submit">submit</button>
+    </form>
+  </section>
+  <section id="success-section" class="collapsed">
+    <H1>congratulations you successfully sent this form</H1>
+    <form action="" id="change-form">
+      <label for="change">
+        change information?
+      </label>
+      <button id="change">Change Information</button>
+    </form>
+  </section>
+</body>
+</html>
