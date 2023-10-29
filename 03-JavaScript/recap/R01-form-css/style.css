@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  min-height: 100vh;
+  background: rgb(156, 205, 255);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+main {
+  width: 85vw;
+  height: 90vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: aliceblue;
+
+  border-radius: 13px;
+  overflow: hidden;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  
+}
+
+#general-info-section{
+  width: 42.5vw;
+  height: 90vh;
+
+  display: flex;
+  align-self: center;
+  justify-content:start;
+  flex-direction: column;
+  gap: 20px;
+
+  padding: 30px;
+
+  color: rgb(90, 55, 196);
+}
+
+#general-info-section input,
+#general-info-section select{
+  /* color: rgb(90, 55, 196); */
+  color: rgb(84, 84, 84);
+}
+
+#contact-details-section{
+  background-color: rgb(90, 55, 196);
+  color: white;
+  width: 42.5vw;
+  height: 90vh;
+
+  display: flex;
+  align-self: center;
+  justify-content:start;
+  flex-direction: column;
+  gap: 20px;
+
+  padding: 30px;
+}
+
+a {
+  color: white;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="select"],
+input[type="tel"],
+input[type="email"],
+select{
+  height: 40px;
+  background: none;
+  border: 0px;
+  border-bottom: 2px rgb(230, 230, 230) solid;
+}
+
+button{
+  height: 40px;
+  width: 150px;
+  border-radius: 20px;
+  border: none;
+
+  font-weight: bold;
+
+  background-color: white;
+}
+
+#contact-details-section input,
+#contact-details-section select{
+  color: white;
+  
+}
+
+input[type="checkbox"]{
+  cursor: pointer;
+  appearance: none;
+
+  height: 13px;
+  width: 13px;
+
+  border: 2px solid white;
+  border-radius: 2px;
+  color: white;
+}
+
+input[type="checkbox"]:checked {
+  background: rgb(149, 255, 177);
+  color: white;
+}
+

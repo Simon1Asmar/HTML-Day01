@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <form action="#">
+      <section id="general-info-section">
+        <h2>General Information</h2>
+        <select name="title" id="title">
+          <!-- This first option is basically a placeholder -->
+          <option value="" disabled selected>Title</option>
+          <option value="dr">Dr.</option>
+          <option value="prof">Prof.</option>
+          <option value="mr">Mr.</option>
+          <option value="mrs">Mrs.</option>
+          <option value="ms">Ms.</option>
+        </select>
+
+        <section id="name-section" class="row">
+          <input type="text" placeholder="First Name">
+          <input type="text" placeholder="Last Name">
+        </section>
+
+        <select name="position" id="position">
+          <!-- This first option is basically a placeholder -->
+          <option value="" disabled selected>Position</option>
+        </select>
+
+        <input type="text" name="company" id="company" placeholder="company">
+
+        <section id="business-section" class="row">
+
+          <input type="text" name="business-area" id="business-area" placeholder="Business Area">
+          <select name="employees" id="employees">
+            <option value="" disabled selected>Employees</option>
+          </select>
+
+        </section>
+
+      </section>
+
+      <section id="contact-details-section">
+  
+        <h2>Contact Details</h2>
+
+        <input type="text" name="street-num" id="street-num" placeholder="Street + Nr">
+
+        <input type="text" name="additional-info" id="additional-info" placeholder="Additional Information">
+
+        <section class="row">
+          <input type="text" name="zip-code" id="zip-code" placeholder="Zip Code">
+
+          <select name="place" id="place">
+            <option value="" disabled selected>Place</option>
+          </select>
+        </section>
+
+        <select name="country" id="country">
+          <option value="" disabled selected>Country</option>
+        </select>
+
+        <section class="row">
+          <select name="code" id="code">
+            <option value="" disabled selected>Code</option>
+          </select>
+
+          <input type="tel" name="phone-num" id="phone-num" placeholder="Phone Number">
+        </section>
+
+        <input type="email" name="email" id="email" placeholder="Your Email">
+
+        <section class="row">
+          <input type="checkbox" name="terms" id="terms">
+          <label for="terms">I do accept the <a href="#">Terms and Conditions</a> of your site.</label>
+        </section>
+
+        <button>
+          Register Badge
+        </button>
+      </section>
+    </form>
+  </main>
+</body>
+</html>
