@@ -12,26 +12,46 @@ body {
   justify-content: center;
 
   padding: 30px;
+
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 #movies-list{
-  height: 500px;
-  max-width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 10px;  
+}
+
+.movie-card {
+  height: 600px;
+  width: 300px;
+
   border: 2px solid #333;
   border-radius: 25px;
   
   background-color: black;
 
   display: flex;
-  align-items: start;
-  justify-content: center;
+  align-items: center;
+  justify-content: start;
   text-align: center;
+  flex-direction: column;
 
   overflow: hidden;
 
   color: white;
+
+  padding-bottom: 10px;
 }
 
 .movieImage{
   width: 300px;
+}
+
+.extra-movie-details{
+  font-size: 0.8rem;
 }
