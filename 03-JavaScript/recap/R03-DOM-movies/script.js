@@ -64,6 +64,46 @@ const movies = [
 // SELECTING DOM ELEMENTS
 const body = document.body;
 const moviesList = document.querySelector("#movies-list");
+//selecting form DOM elements
+const form = document.querySelector("form");
+const titleInput = document.querySelector("#title");
+const genresInput = document.querySelector("#genres");
+const directorInput = document.querySelector("#director");
+const yearInput = document.querySelector("#year");
+const ratingInput = document.querySelector("#rating");
+const votesInput = document.querySelector("#votes");
+const imgInput = document.querySelector("#img-link");
+
+displayAllMovies();
+
+form.addEventListener("submit", addNewMove);
+
+function addNewMove(event){
+  event.preventDefault();
+
+  if(titleInput.value && genresInput.value && directorInput.value && yearInput.value && ratingInput.value && votesInput.value && imgInput.value){
+    const newMovie = {
+      id: movies.length+1,
+      title: titleInput.value,
+      genre: genresInput.value,
+      director: directorInput.value,
+      releaseYear: yearInput.value,
+      rating: ratingInput.value,
+      votes: votesInput.value,
+      img: imgInput.value,
+    }
+  
+    movies.push(newMovie);
+  
+    displayAllMovies();
+    // displayMovie(movies[movies.length-1]);
+    form.reset();
+    window.alert(`Movie id: ${newMovie.id}, "${newMovie.title} added successfully!"`)
+  } else {
+    window.alert("Please fill in all input fields");
+  }
+
+}
 
 // displayMovie(movie);
 
@@ -95,6 +135,19 @@ function displayMovie(movie) {
   movieCard.append(extraMovieDetails);
 }
 
-movies.forEach(movie => {
-  displayMovie(movie);
-})
+function displayAllMovies(){
+  clearMoviesList();
+
+  movies.forEach(movie => {
+    displayMovie(movie);
+  })
+}
+
+function clearMoviesList(){
+  while(moviesList.children.length > 0){
+    moviesList.removeChild(moviesList.firstChild);
+  }
+}
+
+//image link to test: zootopia
+//https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fexternal-preview.redd.it%2FwtlDFrvnyTyPUPiLYgZ8sqg57PCVyGsKeJ153K4KDoA.jpg%3Fauto%3Dwebp%26s%3D5e3b665764fa1bac64bebfd30545d143e0ac1000&f=1&nofb=1&ipt=ed95a4bbba4093a77d1ebd5df666c322fecd0405fb1c81b2690bf2a59ff38108&ipo=images

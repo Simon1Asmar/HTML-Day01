@@ -7,8 +7,20 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <form action="">
+    <input type="text" name="title" id="title" placeholder="Title">
+    <input type="text" name="genres" id="genres" placeholder="Genres">
+    <input type="text" name="director" id="director" placeholder="Director">
+    <input type="number" name="year" id="year" min="1800" max="2100" step="1" placeholder="Release Year">
+    <input type="number" name="rating" id="rating" min="0" max="10" step="0.1" placeholder="Rating">
+    <input type="number" name="votes" id="votes" min="0" max="99999999" step="1" placeholder="votes">
+    <input type="text" name="img-link" id="img-link" placeholder="image url">
+    <button type="submit">Add Movie</button>
+  </form>
+
   <section id="movies-list"></section>
-  
+
   <script src="script.js"></script>
 </body>
 </html>
