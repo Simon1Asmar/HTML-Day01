@@ -1,19 +1,59 @@
-const listOfNeighbours = [
-  ["Canada", "Mexico"], //0
-  ["Spain"], //1
-  ["Norway", "Sweden", "Russia"], //2
-  ];
+// const nums = [43, 12, 55, 2]
 
-  console.log(listOfNeighbours.length)
+// // const doubled = nums.map(n => {
+// //   return n*2;
+// // });
+// // console.log(doubled);
 
-  for(let i = 0; i<listOfNeighbours.length;i++){ //i=0
-    // console.log(`i=${i}: listOfNeighbours[${i}]=`+listOfNeighbours[i])  //listOfNeighbours[0] ---- ["canada", "Mexico"]
+// const sum = nums.reduce((acc, num) => {
+//   return acc + num;
+// })
 
-    //listOfNeighbours[0].length == 2
-    // console.log(listOfNeighbours[i].length)
-    innerArray = listOfNeighbours[i]
-    for(let j=0; j<innerArray.length; j++){
-      console.log(innerArray[j])
-    }
+// console.log(sum);
 
-  }
+// nums.sort((el1, el2) => {
+//   return el2 - el1;
+// })
+
+// console.log(nums);
+
+
+
+
+
+// function vowelCount(str){
+//   const counterObj = {};
+
+//   str.toLowerCase();
+//   str = str.split("");
+
+//   str.forEach(char => {
+//     if(char === "a" || char === "e" || char === "u" || char === "i" || char === "o"){
+
+//       if(counterObj[char]===undefined){
+//         counterObj[char] = 1;
+//       } else {
+//         counterObj[char]++;
+//       }
+      
+//     }
+//   });
+
+//   console.log(counterObj)
+
+
+// }
+// //A,E,O,U,I
+// const string = "hello my name is Adele i'm 10 years old iu love singing"
+// vowelCount(string)
+
+// const pattern = new RegExp(/[a-zA-Z]/)
+
+
+const paragraph = document.querySelector("p");
+let fontSize = parseInt(window.getComputedStyle(paragraph).fontSize);
+console.log(fontSize);
+
+fontSize = 90
+
+paragraph.style.fontSize = `${fontSize}px`

@@ -7,7 +7,7 @@ let movies = [
     releaseYear: 1994,
     rating: 9.3,
     votes: 2345890,
-    length: 120
+    length: 120,
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ let movies = [
     releaseYear: 1972,
     rating: 9.2,
     votes: 1620360,
-    length: 120
+    length: 120,
   },
   {
     id: 3,
@@ -27,7 +27,7 @@ let movies = [
     releaseYear: 1974,
     rating: 9.0,
     votes: 1133175,
-    length: 120
+    length: 120,
   },
   {
     id: 4,
@@ -37,7 +37,7 @@ let movies = [
     releaseYear: 2008,
     rating: 9.0,
     votes: 2303232,
-    length: 120
+    length: 120,
   },
   {
     id: 5,
@@ -47,41 +47,46 @@ let movies = [
     releaseYear: 1957,
     rating: 9.0,
     votes: 689845,
-    length: 120
+    length: 120,
   },
 ];
 
-console.log('movies', movies)
+console.log("movies", movies);
 
 // 1. Movie Initials: Create a function,  getMovieInitials(title) , that takes a movie title and returns its initials.
 // This function takes a string of words and returns its initials
-function getMovieInitials(title){
-
+function getMovieInitials(title) {
   let initials = "";
 
-  /* turns the string into an array of words, 
+  /* turns the string into an array of words,
    * then adds the first letter of each word to the initials variable */
-  title.split(" ").forEach(word => {
-    initials+=word.charAt(0);
-  })
+  title.split(" ").forEach((word) => {
+    initials += word.charAt(0);
+  });
 
   return initials;
 }
-console.log('getMovieInitials(movies[1].title)', getMovieInitials(movies[2].title));
+console.log(
+  "getMovieInitials(movies[1].title)",
+  getMovieInitials(movies[2].title)
+);
 
 //another way
-function getMovieInitials2(title){
-  return title.split(" ").map(word => word.charAt(0).toUpperCase()).join("");
+function getMovieInitials2(title) {
+  return title
+    .split(" ")
+    .map((word) => word.charAt(0).toUpperCase())
+    .join("");
 }
 console.log(getMovieInitials2("the dark knight"));
 
 /* 2. Genre List: Implement a function, splitGenres(genres),
- * that takes a string of genres separated by commas 
+ * that takes a string of genres separated by commas
  * and converts it into an array of individual genres. */
-function splitGenres(genres){
+function splitGenres(genres) {
   return genres.split(", ");
 }
-console.log('splitGenres(movies[3].genre)', splitGenres(movies[3].genre));
+console.log("splitGenres(movies[3].genre)", splitGenres(movies[3].genre));
 
 // 3. Arrow Functions with Multiple Operations: Given a function  getTotalMovieLength  that calculates the total length of all movies and returns a string, convert it into an arrow function.
 const getTotalMovieLength = (movies) => {
@@ -89,81 +94,129 @@ const getTotalMovieLength = (movies) => {
   for (let i = 0; i < movies.length; i++) {
     totalLength += movies[i].length;
   }
-  return 'Total movie length is ' + totalLength + ' minutes';
-}
+  return "Total movie length is " + totalLength + " minutes";
+};
 
 console.log(getTotalMovieLength(movies));
-
 
 //ARRAY METHODS
 
 // 1. takes in an array of movie objects and returns an array of movie titles
-function displayMovieTitles(arrayOfMovies){
-  return arrayOfMovies.map(movie => movie.title);
+function displayMovieTitles(arrayOfMovies) {
+  return arrayOfMovies.map((movie) => movie.title);
 }
 
 console.log(displayMovieTitles(movies));
 
 // 2. Highly Rated Movies: Given an array of movie objects and a minimum rating value, return a new array containing only movies with a rating equal to or greater than the provided value.
-function filterByRating(arrayOfMovies, minRating){
+function filterByRating(arrayOfMovies, minRating) {
   // return arrayOfMovies.reduce((accumilator, currentValue) => {
   //   if(currentValue.rating>=minRating){
   //     accumilator.push(currentValue)
-  //   } 
+  //   }
   //   return accumilator;
   // },[]);
 
-  return arrayOfMovies.filter(movie => movie.rating >= minRating)
+  return arrayOfMovies.filter((movie) => movie.rating >= minRating);
 }
 
 console.log(filterByRating(movies, 9.1));
 
-
 //3. Average Movie Rating: Calculate and return the average movie rating from an array of movie objects. Example: Given the input data, the function should return approximately 9.1
 // calculates the average movie rating
-function averageMovieRating(arrayOfMovies){
+function averageMovieRating(arrayOfMovies) {
   // sums up all the movie ratings, then devides by the number of movies (.length) and returns the value
-  return arrayOfMovies.reduce((accumilator, currentMovie) => {
-    // console.log(accumilator)
-    return accumilator + currentMovie.rating;
-  },0) / arrayOfMovies.length;
+  return (
+    arrayOfMovies.reduce((accumilator, currentMovie) => {
+      // console.log(accumilator)
+      return accumilator + currentMovie.rating;
+    }, 0) / arrayOfMovies.length
+  );
 }
 console.log(averageMovieRating(movies));
 
 // 4. Sort Movies by Votes: Given an array of movie objects, return a new array sorted by the number of votes in descending order.
-function sortMoviesByVotes(arrayOfMovies){
+function sortMoviesByVotes(arrayOfMovies) {
   return arrayOfMovies.sort((movieA, movieB) => movieB.votes - movieA.votes);
 }
-console.log('sortMoviesByVotes(movies)', sortMoviesByVotes(movies))
+console.log("sortMoviesByVotes(movies)", sortMoviesByVotes(movies));
 
 //OBJECTS
 
 const movieDatabase = {
   movies: [],
+
+  addMovie: function (title) {
+    const newMovie = {
+      title: title,
+      ratings: [],
+      averageRating: 0,
+    };
+
+    this.movies.push(newMovie);
+  },
+
+  removeMovie: function (title) {
+    const movieIndex = this.movies.findIndex((movie) => movie.title.toUpperCase() === title.toUpperCase());
+
+    if (movieIndex !== -1) {
+      this.movies.splice(movieIndex, 1);
+    }
+  },
+
+  addRating: function (title, rating) {
+    const movieIndex = this.movies.findIndex((movie) => movie.title.toUpperCase() === title.toUpperCase());
+
+    //if movie exists
+    if (movieIndex !== -1) {
+      const movie = this.movies[movieIndex];
+
+      // push rating to ratings array
+      movie.ratings.push(rating);
+
+      // calculate and update average rating
+      movie.averageRating = (
+        movie.ratings.reduce((accumilator, currentRating) => {
+          return accumilator + currentRating;
+        }, 0) / movie.ratings.length).toFixed(2);
+    }
+  },
+
+  removeRating: function (title, rating) {
+    const movieIndex = this.movies.findIndex((movie) => movie.title.toUpperCase() === title.toUpperCase());
+
+    if (movieIndex !== -1) {
+      const movie = this.movies[movieIndex];
+
+      const ratingIndex = movie.ratings.indexOf(rating);
+      if(ratingIndex !== -1){
+        movie.ratings.splice(ratingIndex, 1);
+      }
+    }
+  },
+
+  searchMovie: function(string){
+    const arrayOfMovies = [];
+
+    this.movies.forEach(movie => {
+      const movieTitle = movie.title.toLowerCase();
+      string = string.toLowerCase();
+      if(movieTitle.includes(string)){
+        arrayOfMovies.push(movie);
+      }
+    });
+
+    return arrayOfMovies;
+
+  },
 };
 
-
-function addMovie(title){
-  const newMovie = {
-    title: title,
-    ratings: [],
-    averageRating: 0,
-  }
-
-  // newMovie.averageRating = (ratings.reduce((accumilator, currentRating) => {
-  //   return accumilator + currentRating;
-  // }, 0) / ratings.length).toFixed(2);
-
-  movieDatabase.movies.push(newMovie);
-}
-
-addMovie("Home Alone");
-
+movieDatabase.addMovie("Home Alone");
+movieDatabase.addMovie("Blue Streak");
+movieDatabase.addMovie("Black Panther");
+movieDatabase.removeMovie("Home Alone");
+movieDatabase.addRating("blue streak", 9.2);
+movieDatabase.addRating("blue streak", 10);
+movieDatabase.removeRating("blue streak", 10);
 console.log(movieDatabase);
-
-function removeMovie(title){
-  log(movieDatabase.movies.includes)
-}
-
-
-
+console.log('movieDatabase.searchMovie("bl")', movieDatabase.searchMovie("bl"));
