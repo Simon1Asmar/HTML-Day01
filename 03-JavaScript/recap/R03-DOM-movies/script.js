@@ -133,6 +133,12 @@ function displayMovie(movie) {
   extraMovieDetails.innerText = `Director: ${movie.director}\nVotes: ${movie.votes}`;
   extraMovieDetails.classList.add("extra-movie-details");
   movieCard.append(extraMovieDetails);
+
+  const removeButton = document.createElement("button");
+  removeButton.innerText = `-`;
+  removeButton.setAttribute("movie-id", movie.id);
+  removeButton.addEventListener("click", removeMovie);
+  movieCard.append(removeButton);
 }
 
 function displayAllMovies(){
@@ -146,6 +152,22 @@ function displayAllMovies(){
 function clearMoviesList(){
   while(moviesList.children.length > 0){
     moviesList.removeChild(moviesList.firstChild);
+  }
+}
+
+function removeMovie(event){
+  console.log(event.target.getAttribute("movie-id"));
+  const movieIndex = Number(event.target.getAttribute("movie-id")) - 1;
+  movies.splice(movieIndex, 1);
+
+  fixMovieIDs();
+
+  displayAllMovies();
+}
+
+function fixMovieIDs(){
+  for (let i = 0; i < movies.length; i++) {
+    movies[i].id = i+1;
   }
 }
 
