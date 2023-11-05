@@ -9,8 +9,6 @@ You cannot change the printSuperPower function
 */
 
 const storm = {
-  // add code here
-
   //since the "this" inside the printSuperPower wouth be pointing to the window
   //inside this storm object i created a super power variable
   superPower: "flying",
