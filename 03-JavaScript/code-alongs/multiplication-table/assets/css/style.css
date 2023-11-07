@@ -1,0 +1,19 @@
+table,
+th,
+td{
+  border: 2px solid black;
+  border-collapse: collapse;
+}
+
+table {
+  text-align: center;
+}
+
+td {
+  width: 50px;
+}
+
+td:hover {
+  cursor: default;
+  background-color: yellowgreen;
+}
