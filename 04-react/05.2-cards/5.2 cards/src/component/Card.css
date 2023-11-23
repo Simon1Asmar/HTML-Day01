@@ -1,0 +1,15 @@
+.container{
+  border: white 1px solid;
+  width: 400px;
+  height: 400px;
+  padding: 10px;
+  margin-bottom: 10px;
+
+  background-color: #555;
+  border-radius: 15px;
+}
+
+img{
+  height: 50px;
+  width: 50px;
+}
