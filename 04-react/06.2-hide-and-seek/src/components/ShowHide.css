@@ -1,0 +1,23 @@
+.show-hide-container{
+  height: 500px;
+  width: 350px;
+
+  background-color: rgb(40, 40, 40);
+  border: 1px solid black;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+
+  gap: 20px;
+
+  padding-top: 20px;
+}
+
+.box{
+  width: 80%;
+  height: 80%;
+
+  background-color: rgb(119, 0, 255);
+}
