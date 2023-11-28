@@ -12,8 +12,8 @@ function App() {
   return (
     <>
     <section className='container'>
-      <ColorToggleImg source="/images/namibia-1.jpg" altText="a picture of a tree in namibia"/>
-      <ColorToggleImg source="/images/kenya-antelope.jpg" altText="a picture of a tree in namibia"/>
+      <ColorToggleImg source="/images/namibia-1.jpg" altText="a picture of a tree in Namibia"/>
+      <ColorToggleImg source="/images/kenya-antelope.jpg" altText="a picture of an antelope funning in nature in Kenya"/>
     </section>
     </>
   )
