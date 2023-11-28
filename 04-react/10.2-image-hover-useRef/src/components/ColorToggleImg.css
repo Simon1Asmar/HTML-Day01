@@ -1,0 +1,16 @@
+.greyscale{
+  filter: grayscale(100%);
+}
+
+img{
+  height: 60vh;
+  width: 40vw;
+
+  object-position: bottom;
+  object-fit: cover;
+}
+
+.container{
+  display: flex;
+  gap: 5vw;
+}
