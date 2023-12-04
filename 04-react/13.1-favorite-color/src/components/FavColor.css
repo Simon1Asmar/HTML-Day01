@@ -1,0 +1,12 @@
+#color-div{
+  height: 50px;
+  width: 50px;
+}
+
+.blue{
+  background-color: rgb(106, 106, 255);
+}
+
+.green{
+  background-color: rgb(102, 255, 102);
+}
