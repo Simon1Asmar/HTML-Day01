@@ -1,0 +1,1 @@
+this is some text I'm writing inside file1.txt (copied to file2.txt) <- and this text was appended
