@@ -1,0 +1,21 @@
+{
+  "dependencies": {
+    "chai": "^5.0.0",
+    "mocha": "^10.2.0"
+  },
+  "name": "06-tests",
+  "type": "module",
+  "version": "1.0.0",
+  "main": "functions.js",
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

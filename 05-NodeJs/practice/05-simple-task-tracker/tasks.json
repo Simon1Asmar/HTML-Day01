@@ -1,0 +1,28 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "task": "Buy groceries",
+      "description": "Milk, bread, eggs",
+      "date": "2023-12-28"
+    },
+    {
+      "id": 2,
+      "task": "Finish report",
+      "description": "Sales data analysis",
+      "date": "2023-12-29"
+    },
+    {
+      "id": 3,
+      "task": "Call John",
+      "description": "Discuss project details",
+      "date": "2023-12-30"
+    },
+    {
+      "id": 4,
+      "task": "Gym workout",
+      "description": "30 mins cardio",
+      "date": "2023-12-31"
+    }
+  ]
+}
